@@ -3,7 +3,7 @@
 namespace RefactoringGuru\Visitor\RealWorld;
 
 /**
- * Visitor Design Pattern
+ * EN: Visitor Design Pattern
  *
  * Intent: Represent an operation to be performed over elements of an object
  * structure. The Visitor pattern lets you define a new operation without
@@ -16,6 +16,20 @@ namespace RefactoringGuru\Visitor\RealWorld;
  *
  * Once the Visitor infrastructure is added to the app, you can easily add other
  * similar behaviors to the app, without changing the existing classes.
+ *
+ * RU: Паттерн Посетитель
+ *
+ * Назначение: Изображает операцию, выполняемую над элементами структуры объекта.
+ * Паттерн Посетитель позволяет определить новую операцию без изменения классов элементов,
+ * на которых она работает.
+ *
+ * Пример: В этом примере шаблон Посетитель помогает внедрить функцию отчётности
+ * в существующую иерархию классов:
+ *
+ * Компания > Отдел > Сотрудник
+ *
+ * После добавления инфраструктуры Посетителя вы можете легко добавлять 
+ * в приложение другие подобные поведения без изменения существующих классов.
  */
 
 /**
