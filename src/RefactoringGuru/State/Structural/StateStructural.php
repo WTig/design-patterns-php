@@ -3,21 +3,35 @@
 namespace RefactoringGuru\State\Structural;
 
 /**
- * State Design Pattern
+ * EN: State Design Pattern
  *
  * Intent: Allow an object to alter its behavior when its internal state
  * changes. The object will appear to change its class.
+ *
+ * RU: Паттерн Состояние
+ *
+ * Назначение: Позволяет объекту менять поведение при изменении
+ * внутреннего состояния. Кажется, что объект меняет свой класс.
  */
 
 /**
+ * EN:
  * The Context defines the interface of interest to clients. It also maintains a
  * reference to an instance of a State subclass, which represents the current
  * state of the Context.
+ *
+ * RU:
+ * Контекст устанавливает интерфейс, интересующий клиентов. Он также хранит ссылку
+ * на экземпляр подкласса Состояния, который представляет текущее состояние Контекста. 
  */
 class Context
 {
     /**
+     * EN:
      * @var State A reference to the current state of the Context.
+     *
+     * RU:
+     *  @var State Ссылка на текущее состояние Контекста.
      */
     private $state;
 
@@ -30,7 +44,11 @@ class Context
     }
 
     /**
+     * EN:
      * The Context allows changing the State object at runtime.
+     *
+     * RU:
+     * Контекст позволяет изменять объект Состояние во время выполнения.
      *
      * @param State $state
      */
@@ -42,7 +60,11 @@ class Context
     }
 
     /**
+     * EN:
      * The Context delegates part of its behavior to the current State object.
+     *
+     * RU:
+     * Контекст делегирует часть своего поведения текущему объекту Состояние.
      */
     public function request1()
     {
