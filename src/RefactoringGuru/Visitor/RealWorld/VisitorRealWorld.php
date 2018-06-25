@@ -33,10 +33,17 @@ namespace RefactoringGuru\Visitor\RealWorld;
  */
 
 /**
+ * EN:
  * The Component interface declares a method of accepting visitor objects.
  *
  * In this method, a Concrete Component must call a specific Visitor's method
  * that has the same parameter type as that component.
+ *
+ * RU:
+ * Интерфейс Компонента объявляет метод принятия объектов-посетителей.
+ *
+ * В этом методе Конкретный Компонент должен вызывать метод конкретного Посетителя,
+ * который имеет тот же тип параметра, что и этот компонент.
  */
 interface Entity
 {
