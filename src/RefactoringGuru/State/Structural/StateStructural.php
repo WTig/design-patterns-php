@@ -78,10 +78,17 @@ class Context
 }
 
 /**
+ * EN:
  * The base State class declares methods that all Concrete State should
  * implement and also provides a backreference to the Context object, associated
  * with the State. This backreference can be used by States to transition the
  * Context to another State.
+ *
+ * RU:
+ * Базовый класс Состояние объявляет методы, которые должны реализовывать
+ * все Конкретные Состояния, а также предоставляет обратную ссылку на объект Контекст,
+ * связанным с Состоянием. Эта обратная ссылка может использоваться Состояниями
+ * для передачи Контекста другому Состоянию.
  */
 abstract class State
 {
@@ -101,8 +108,12 @@ abstract class State
 }
 
 /**
+ * EN:
  * Concrete States implement various behaviors, associated with a state of the
  * Context.
+ *
+ * RU:
+ * Конкретные Состояния реализуют различные модели поведения, связанные с состоянием Контекста.
  */
 class ConcreteStateA extends State
 {
@@ -135,7 +146,9 @@ class ConcreteStateB extends State
 }
 
 /**
- * The client code.
+ * EN: The client code.
+ *
+ * RU: Клиентский код.
  */
 $context = new Context(new ConcreteStateA());
 $context->request1();
