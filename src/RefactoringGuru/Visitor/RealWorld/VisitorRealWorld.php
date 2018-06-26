@@ -200,7 +200,8 @@ class Employee implements Entity
  * Concrete Component classes.
  *
  * RU:
- * 
+ * Интерфейс Посетителя объявляет набор методов посещения для каждого класса 
+ * Конкретного Компонента.
  */
 interface Visitor
 {
@@ -212,8 +213,13 @@ interface Visitor
 }
 
 /**
+ * EN:
  * The Concrete Visitor must provide implementations for every single class of
  * the Concrete Components.
+ *
+ * RU:
+ * Конкретный Посетитель должен предоставить реализации для каждого из
+ * классов Конкретных Компонентов.
  */
 class SalaryReport implements Visitor
 {
@@ -257,7 +263,11 @@ class SalaryReport implements Visitor
 }
 
 /**
+ * EN:
  * The client code.
+ *
+ * RU:
+ * Клиентский код.
  */
 
 $mobileDev = new Department("Mobile Development", [
