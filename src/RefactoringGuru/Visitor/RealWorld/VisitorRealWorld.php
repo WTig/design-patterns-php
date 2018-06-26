@@ -21,7 +21,7 @@ namespace RefactoringGuru\Visitor\RealWorld;
  *
  * Назначение: Изображает операцию, выполняемую над элементами структуры объекта.
  * Паттерн Посетитель позволяет определить новую операцию без изменения классов элементов,
- * на которых она работает.
+ * с которыми она работает.
  *
  * Пример: В этом примере шаблон Посетитель помогает внедрить функцию отчётности
  * в существующую иерархию классов:
@@ -42,8 +42,8 @@ namespace RefactoringGuru\Visitor\RealWorld;
  * RU:
  * Интерфейс Компонента объявляет метод принятия объектов-посетителей.
  *
- * В этом методе Конкретный Компонент должен вызывать метод конкретного Посетителя,
- * который имеет тот же тип параметра, что и этот компонент.
+ * В этом методе Конкретный Компонент вызывает конкретный метод Посетителя,
+ * с тем же типом параметра, что и у компонента.
  */
 interface Entity
 {
@@ -51,7 +51,11 @@ interface Entity
 }
 
 /**
+ * EN:
  * The Company Concrete Component.
+ *
+ * RU:
+ * Конкретный Компонент Компании.
  */
 class Company implements Entity
 {
@@ -82,21 +86,32 @@ class Company implements Entity
 
     public function accept(Visitor $visitor)
     {
-        // See, the Company component must call the visitCompany method. The
+        // EN: See, the Company component must call the visitCompany method. The
         // same principle applies to all components.
+        //
+        // RU: Смотрите, Компонент Компании должен вызвать метод visitCompany.
+        // Тот же принцип применяется ко всем компонентам.
         return $visitor->visitCompany($this);
     }
 }
 
 /**
+ * EN:
  * The Department Concrete Component.
+ *
+ * RU:
+ * Конкретный Компонент Отдела.
  */
 class Department implements Entity
 {
     private $name;
 
     /**
-     * @var Employee[]
+     * EN:
+     * @var Employee[].
+     *
+     * RU:
+     * @var Сотрудник.
      */
     private $employees;
 
@@ -135,7 +150,11 @@ class Department implements Entity
 }
 
 /**
+ * EN:
  * The Employee Concrete Component.
+ *
+ * RU:
+ * Конкретный Компонент Сотрудника.
  */
 class Employee implements Entity
 {
@@ -176,8 +195,12 @@ class Employee implements Entity
 }
 
 /**
+ * EN:
  * The Visitor interface declares a set of visiting methods for each of the
  * Concrete Component classes.
+ *
+ * RU:
+ * 
  */
 interface Visitor
 {
