@@ -107,7 +107,6 @@ class Department implements Entity
     private $name;
 
     /**
-     * EN:
      * @var Employee[].
      */
     private $employees;
