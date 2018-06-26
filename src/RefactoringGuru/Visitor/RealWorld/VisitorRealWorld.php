@@ -109,9 +109,6 @@ class Department implements Entity
     /**
      * EN:
      * @var Employee[].
-     *
-     * RU:
-     * @var Сотрудник.
      */
     private $employees;
 
